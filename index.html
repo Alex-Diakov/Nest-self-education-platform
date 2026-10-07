@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <title>NextSelf — Профілювання особистості | Від хаосу до твердої опори</title>
+    <meta name="description" content="NextSelf — екосистема прикладних психотехнологій та поведінкового профайлінгу Олександра Дьякова. Діагностика стресу, когнітивні сканери, подолання вигорання та стійка внутрішня опора." />
+    <meta property="og:title" content="NextSelf — Профілювання особистості | Від хаосу до твердої опори" />
+    <meta property="og:description" content="NextSelf — екосистема прикладних психотехнологій та поведінкового профайлінгу Олександра Дьякова. Діагностика стресу, когнітивні сканери, подолання вигорання та стійка внутрішня опора." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#FEFBFF" />
+    <link rel="preload" href="/fonts/e-Ukraine-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/fonts/e-UkraineHead-Bold.otf" as="font" type="font/otf" crossorigin>
+    <script>
+      // Gracefully prevent noisy Vite HMR WebSocket connection errors in sandbox environment
+      window.addEventListener('error', function(e) {
+        if (e && (e.message && e.message.includes('WebSocket') || e.filename && e.filename.includes('@vite/client'))) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e && e.reason && String(e.reason).includes('WebSocket')) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      }, true);
+    </script>
+  </head>
+  <body class="antialiased selection:bg-[var(--md-sys-color-primary)] selection:text-[var(--md-sys-color-on-primary)] bg-[var(--md-sys-color-background)] text-[var(--md-sys-color-on-background)]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

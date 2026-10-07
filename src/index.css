@@ -1,0 +1,295 @@
+@import "tailwindcss";
+@import "./design-system/tokens/design-tokens.css";
+
+/* -------------------------------------------------------------
+ * e-Ukraine Font Family (https://thedigital.gov.ua/fonts)
+ * Developed by Fedoriv for the Ministry of Digital Transformation
+ * ------------------------------------------------------------- */
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('/fonts/e-Ukraine-Light.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/bennetfabian/e-Ukraine@main/e-Ukraine-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('/fonts/e-Ukraine-Regular.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/bennetfabian/e-Ukraine@main/e-Ukraine-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('/fonts/e-Ukraine-Medium.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/bennetfabian/e-Ukraine@main/e-Ukraine-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('/fonts/e-Ukraine-Bold.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/bennetfabian/e-Ukraine@main/e-Ukraine-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* e-Ukraine Head for headings and prominent titles */
+@font-face {
+  font-family: 'e-Ukraine Head';
+  src: url('/fonts/e-UkraineHead-Regular.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/bennetfabian/e-Ukraine@main/e-UkraineHead-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'e-Ukraine Head';
+  src: url('/fonts/e-UkraineHead-Medium.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/bennetfabian/e-Ukraine@main/e-UkraineHead-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'e-Ukraine Head';
+  src: url('/fonts/e-UkraineHead-Bold.otf') format('opentype'),
+       url('https://cdn.jsdelivr.net/gh/bennetfabian/e-Ukraine@main/e-UkraineHead-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Centralized Font Variables mapped directly into Tailwind */
+  --font-display: var(--font-family-display, 'e-Ukraine Head', 'e-Ukraine', sans-serif);
+  --font-sans: var(--font-family-primary, 'e-Ukraine', system-ui, sans-serif);
+  --font-serif: var(--font-family-serif, 'Georgia', serif);
+  --font-mono: var(--font-family-mono, 'JetBrains Mono', ui-monospace, monospace);
+
+  /* Material 3 Color Roles mapped from CSS variables */
+  --color-m3-primary: var(--md-sys-color-primary);
+  --color-m3-on-primary: var(--md-sys-color-on-primary);
+  --color-m3-primary-container: var(--md-sys-color-primary-container);
+  --color-m3-on-primary-container: var(--md-sys-color-on-primary-container);
+
+  --color-m3-secondary: var(--md-sys-color-secondary);
+  --color-m3-on-secondary: var(--md-sys-color-on-secondary);
+  --color-m3-secondary-container: var(--md-sys-color-secondary-container);
+  --color-m3-on-secondary-container: var(--md-sys-color-on-secondary-container);
+
+  --color-m3-tertiary: var(--md-sys-color-tertiary);
+  --color-m3-on-tertiary: var(--md-sys-color-on-tertiary);
+  --color-m3-tertiary-container: var(--md-sys-color-tertiary-container);
+  --color-m3-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+
+  --color-m3-error: var(--md-sys-color-error);
+  --color-m3-on-error: var(--md-sys-color-on-error);
+  --color-m3-error-container: var(--md-sys-color-error-container);
+  --color-m3-on-error-container: var(--md-sys-color-on-error-container);
+
+  --color-m3-background: var(--md-sys-color-background);
+  --color-m3-on-background: var(--md-sys-color-on-background);
+
+  --color-m3-surface: var(--md-sys-color-surface);
+  --color-m3-on-surface: var(--md-sys-color-on-surface);
+  --color-m3-surface-variant: var(--md-sys-color-surface-variant);
+  --color-m3-on-surface-variant: var(--md-sys-color-on-surface-variant);
+
+  --color-m3-outline: var(--md-sys-color-outline);
+  --color-m3-outline-variant: var(--md-sys-color-outline-variant);
+
+  --color-m3-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+  --color-m3-surface-container-low: var(--md-sys-color-surface-container-low);
+  --color-m3-surface-container: var(--md-sys-color-surface-container);
+  --color-m3-surface-container-high: var(--md-sys-color-surface-container-high);
+  --color-m3-surface-container-highest: var(--md-sys-color-surface-container-highest);
+
+  --color-m3-inverse-surface: var(--md-sys-color-inverse-surface);
+  --color-m3-inverse-on-surface: var(--md-sys-color-inverse-on-surface);
+  --color-m3-inverse-primary: var(--md-sys-color-inverse-primary);
+
+  /* Centralized Shape Tokens */
+  --radius-xs: var(--md-sys-shape-corner-extra-small, 4px);
+  --radius-sm: var(--md-sys-shape-corner-small, 8px);
+  --radius-md: var(--md-sys-shape-corner-medium, 12px);
+  --radius-lg: var(--md-sys-shape-corner-large, 16px);
+  --radius-xl: var(--md-sys-shape-corner-extra-large, 28px);
+  --radius-full: var(--md-sys-shape-corner-full, 9999px);
+}
+
+:root {
+  /* GLOBAL FONT CONTROLLERS: Change here to update everywhere instantly */
+  --font-family-primary: 'e-Ukraine', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-display: 'e-Ukraine Head', 'e-Ukraine', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* GLOBAL SHAPE CONTROLLERS: Change here to adjust corner rounding everywhere instantly */
+  --md-sys-shape-none: 0px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* GLOBAL MOTION & EASING CONTROLLERS */
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-duration-short: 150ms;
+  --md-sys-motion-duration-medium: 250ms;
+  --md-sys-motion-duration-long: 400ms;
+
+  font-family: var(--font-family-primary);
+  color-scheme: light;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1), color 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* -------------------------------------------------------------
+ * Responsive & Mobile-First Foundation
+ * ------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 320px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Universal font propagation: guarantee e-Ukraine applies to all form & text elements */
+html, body, button, input, textarea, select, optgroup {
+  font-family: var(--font-family-primary);
+}
+
+h1, h2, h3, .font-display, .font-heading {
+  font-family: var(--font-family-display);
+}
+
+/* Responsive Safe Area Utilities */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Fluid Typography Foundation (Scales smoothly from 320px to 1440px+) */
+.text-fluid-display {
+  font-size: clamp(2rem, 5vw + 0.5rem, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.text-fluid-headline {
+  font-size: clamp(1.5rem, 3.2vw + 0.4rem, 2.25rem);
+  line-height: 1.22;
+}
+
+.text-fluid-title {
+  font-size: clamp(1.125rem, 1.8vw + 0.4rem, 1.375rem);
+  line-height: 1.35;
+}
+
+/* Prevent text overflow on small mobile screens */
+.text-balance-mobile {
+  text-wrap: balance;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Material 3 State Layer utilities */
+.m3-state-layer {
+  position: relative;
+  overflow: hidden;
+}
+
+.m3-state-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 150ms cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none;
+}
+
+.m3-state-layer:hover::after {
+  opacity: 0.08;
+}
+
+.m3-state-layer:focus-visible::after {
+  opacity: 0.12;
+}
+
+.m3-state-layer:active::after {
+  opacity: 0.12;
+}
+
+/* Material 3 Elevation shadows */
+.m3-elevation-0 {
+  box-shadow: none;
+}
+
+.m3-elevation-1 {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+
+.m3-elevation-2 {
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+
+.m3-elevation-3 {
+  box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.24);
+}
+
+/* Custom scrollbar matching M3 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant, #C7C5D0);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-color-outline, #777680);
+}
+
+/* Accessibility: Focus visible outline with M3 primary color */
+:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+/* Accessibility: Respect user prefers-reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://nextself.com/#/home</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nextself.com/#/home?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://nextself.com/#/home?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextself.com/#/home?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nextself.com/#/home"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Tests Catalog -->
+  <url>
+    <loc>https://nextself.com/#/tests</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nextself.com/#/tests?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://nextself.com/#/tests?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextself.com/#/tests?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nextself.com/#/tests"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Specific Diagnostics -->
+  <url>
+    <loc>https://nextself.com/#/tests/financial-scanner</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://nextself.com/#/tests/pcl5-stress-audit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://nextself.com/#/tests/burnout-syndrome-inventory</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://nextself.com/#/tests/hidden-conflict</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Offerings / Practices -->
+  <url>
+    <loc>https://nextself.com/#/offerings</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nextself.com/#/offerings?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://nextself.com/#/offerings?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextself.com/#/offerings?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nextself.com/#/offerings"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Knowledge Base (Blog) -->
+  <url>
+    <loc>https://nextself.com/#/blog</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nextself.com/#/blog?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://nextself.com/#/blog?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextself.com/#/blog?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nextself.com/#/blog"/>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- About Author -->
+  <url>
+    <loc>https://nextself.com/#/about</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nextself.com/#/about?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://nextself.com/#/about?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextself.com/#/about?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nextself.com/#/about"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
